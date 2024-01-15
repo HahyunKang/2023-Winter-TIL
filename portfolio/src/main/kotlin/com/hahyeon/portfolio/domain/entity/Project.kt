@@ -65,7 +65,7 @@ class Project(
     var details : MutableList<ProjectDetail> = mutableListOf()
 
 
-    //ProjectSkill안에 있는 project 변수에 의해 mapping돈다. 양방향에서 적용
+    //ProjectSkill안에 있는 project 변수에 의해 mapping된다. 양방향에서 적용
     @OneToMany(mappedBy = "project")
     var skills : MutableList<ProjectSkill> = mutableListOf()
 

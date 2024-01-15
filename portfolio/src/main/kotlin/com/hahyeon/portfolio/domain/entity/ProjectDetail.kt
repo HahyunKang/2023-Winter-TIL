@@ -13,7 +13,6 @@ class ProjectDetail(content: String, url: String?, isActive: Boolean) : BaseEnti
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="project_detail_id")
     //테이블 명은 _id, 코틀린 entity는 id -> 직관적으로 변수 사용 가능
-
     var id: Long? = null
 
     var content : String = content
