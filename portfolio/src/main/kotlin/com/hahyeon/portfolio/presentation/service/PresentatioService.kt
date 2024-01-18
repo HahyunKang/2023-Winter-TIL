@@ -28,6 +28,14 @@ class PresentationService(
     }
 
     @org.springframework.transaction.annotation.Transactional(readOnly = true)
+    fun getResume() : ResumeDto {
+       val experiences = presentationRepository.getActiveExperience()
+        val achievements = presentationRepository.getActiveAchievements()
+       val skills = presentationRepository.getActiveSkills()
+
+        return ResumeDto(experiences, achievements, skills)
+    }
+    @org.springframework.transaction.annotation.Transactional(readOnly = true)
     fun getProjects() : List<ProjectDto>{
         val projects = presentationRepository.getActiveProjects()
 
